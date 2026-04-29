@@ -5,15 +5,8 @@ publishing {
         mavenAar(MavenPublication) {
             groupId = 'com.pixpark'
             artifactId = 'gpupixel'
-            version = '1.0.6'  // 推荐每次改成新版本
+            version = '1.0.7'
             artifact file('gpupixel-release.aar')
         }
-    }
-}
-
-afterEvaluate {
-    // 仅发布 AAR 文件
-    artifacts {
-        archives file('gpupixel-release.aar')
     }
 }
