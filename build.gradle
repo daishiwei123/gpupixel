@@ -5,7 +5,7 @@ publishing {
         mavenAar(MavenPublication) {
             groupId = 'com.pixpark'
             artifactId = 'gpupixel'
-            version = '1.0.10'
+            version = '1.3.1'
             artifact file('gpupixel-release.aar')
         }
     }
