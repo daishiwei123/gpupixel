@@ -5,8 +5,11 @@ publishing {
         mavenAar(MavenPublication) {
             groupId = 'com.pixpark'
             artifactId = 'gpupixel'
-            version = '1.0.7'
+            version = '1.0.8'
             artifact file('gpupixel-release.aar')
         }
     }
 }
+
+// 让jitpack能通过默认assemble流程
+task assemble {}
