@@ -1,15 +1,14 @@
-apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
 
-android {
-    namespace 'com.pixpark.gpupixel'
-    compileSdkVersion 31
-
-    defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 31
+publishing {
+    publications {
+        mavenAar(MavenPublication) {
+            groupId = 'com.pixpark'
+            artifactId = 'gpupixel'
+            version = '1.0.5'
+            artifact file('gpupixel-release.aar')
+        }
     }
-    // 无需 java/kotlin 源码
-    // 可省略 sourceSets
 }
 
 afterEvaluate {
