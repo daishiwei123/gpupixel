@@ -1,0 +1,20 @@
+apply plugin: 'com.android.library'
+
+android {
+    namespace 'com.pixpark.gpupixel'
+    compileSdkVersion 31
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 31
+    }
+    // 无需 java/kotlin 源码
+    // 可省略 sourceSets
+}
+
+afterEvaluate {
+    // 仅发布 AAR 文件
+    artifacts {
+        archives file('gpupixel-release.aar')
+    }
+}
